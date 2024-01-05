@@ -1,0 +1,260 @@
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+  --black-gradient: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Very-Dark-Blue);
+}
+
+/* RATING STATE */
+
+/* .card-container {
+  visibility: hidden;
+} */
+.card-container,
+.thanks-card {
+  height: 416px;
+  width: 412px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border-radius: 30px;
+  background: var(--black-gradient);
+}
+.icon-container {
+  height: 48px;
+  width: 48px;
+  border-radius: 100%;
+  background-color: var(--Dark-Blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-area {
+  text-align: left;
+}
+.main-heading {
+  color: var(--White);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: normal;
+}
+.main-paragraph {
+  color: var(--Light-Grey);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 340px;
+}
+ul {
+  list-style: none;
+}
+.rating-container {
+  display: flex;
+  justify-content: center;
+  gap: 21px;
+  margin-bottom: 32px;
+  padding-left: 0px;
+}
+.ratings {
+  border-radius: 100%;
+  width: 51px;
+  height: 51px;
+  background-color: var(--Dark-Blue);
+  cursor: pointer;
+  border: none;
+
+  color: var(--Light-Grey);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+.ratings:hover {
+  background-color: var(--Orange);
+  color: var(--White);
+  transition: 0.6s;
+}
+.ratings:focus {
+  background-color: var(--Medium-Grey);
+  color: var(--White);
+}
+#error-message {
+  display: none;
+  color: red;
+  margin: 0;
+  font-size: 15px;
+}
+.submit-btn {
+  width: 341px;
+  height: 45px;
+  border-radius: 22.5px;
+  background-color: var(--Orange);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+  color: var(--White);
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+}
+.submit-btn:hover {
+  background-color: var(--White);
+  color: var(--Orange);
+  transition: 0.6s;
+}
+
+@media screen and (max-width: 380px) {
+  .card-container,
+  .thanks-container {
+    height: 360px;
+    width: 327px;
+  }
+  .icon-container {
+    width: 40px;
+    height: 40px;
+  }
+  .main-heading {
+    font-size: 24px;
+  }
+  .main-paragraph {
+    font-size: 14px;
+    line-height: 22px;
+    width: 279px;
+  }
+  .rating-container {
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+  .ratings {
+    width: 42px;
+    height: 42px;
+  }
+  .numbers {
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.175px;
+  }
+  #error-message {
+    font-size: 13px;
+  }
+  .submit-btn {
+    width: 279px;
+    height: 45px;
+    font-size: 14px;
+    letter-spacing: 1.867px;
+  }
+}
+
+/* THANK YOU STATE */
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.thanks-card {
+  position: fixed;
+}
+.illustration {
+  margin-bottom: 32px;
+}
+.rated {
+  width: 193px;
+  height: 32px;
+  border-radius: 22.5px;
+  background-color: var(--Dark-Blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding-top: 4px;
+}
+.rated-p {
+  color: var(--Orange);
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.sub-area {
+  text-align: center;
+}
+.sub-heading {
+  color: var(--White);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+.sub-paragraph {
+  width: 340px;
+  color: var(--Light-Grey);
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 380px) {
+  .illustration {
+    margin-bottom: 24px;
+  }
+  .illus-img {
+    width: 144px;
+    height: 96px;
+  }
+  .rated {
+    width: 168px;
+    height: 32px;
+    padding-top: 4px;
+  }
+  .rated-p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .sub-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .sub-paragraph {
+    width: 279px;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 0;
+  }
+}

@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/mkboris/interactive-rating-component
-- Live Site URL: https://interactive-rating-component-tau-three.vercel.app/
+- Live Site URL: https://mkboris.github.io/interactive-rating-component/
 
 ### Built with
 

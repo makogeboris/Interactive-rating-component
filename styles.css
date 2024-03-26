@@ -121,9 +121,9 @@ body {
 
 /* RATING STATE */
 
-/* .card-container {
-  visibility: hidden;
-} */
+.card-container {
+  visibility: visible;
+}
 .card-container,
 .thanks-card {
   min-height: 26rem;

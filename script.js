@@ -1,6 +1,7 @@
 "use strict";
 
 const thanksCard = document.querySelector(".thanks-card");
+const mainCard = document.querySelector(".card-container");
 const submitButton = document.querySelector(".submit-btn");
 const showCardButton = document.querySelector(".show-card-btn");
 const rate = document.getElementById("rate");
@@ -17,6 +18,7 @@ const showCard = function () {
   rate.innerHTML = selectedRating.value;
   // displays thank you card
   thanksCard.classList.remove("hidden");
+  mainCard.style.visibility = "hidden";
 };
 
 showCardButton.addEventListener("click", showCard);

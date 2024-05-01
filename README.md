@@ -8,9 +8,7 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-  - [Continued development](#continued-development)
 - [Author](#author)
-
 
 
 ## Overview
@@ -30,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/mkboris/interactive-rating-component
-- Live Site URL: https://mkboris.github.io/interactive-rating-component/
+- [Solution](https://github.com/mkboris/Interactive-rating-component)
+- [Live Site](https://mkboris.github.io/Interactive-rating-component/)
 
 ### Built with
 
@@ -39,12 +37,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 
-### Continued development
-
-Building more projects to improve my skills.
-
 ## Author
 
 - Frontend Mentor - [@mkboris](https://www.frontendmentor.io/profile/mkboris)
-- Twitter - [@mk_boris](https://www.twitter.com/mk_boris)
 

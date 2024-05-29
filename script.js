@@ -1,35 +1,22 @@
 "use strict";
 
+const form = document.querySelector("form");
+const ratingCard = document.querySelector(".rating-card");
 const thanksCard = document.querySelector(".thanks-card");
-const mainCard = document.querySelector(".card-container");
-const submitButton = document.querySelector(".submit-btn");
-const showCardButton = document.querySelector(".show-card-btn");
+const submitButton = document.querySelector(".btn");
 const rate = document.getElementById("rate");
-const ratings = document.querySelectorAll(".ratings");
-const errorMessage = document.getElementById("error-message");
+const errorMessage = document.querySelector(".error-message");
 
-const showCard = function () {
-  // displays error message
-  let selectedRating = document.querySelector(".ratings.active");
+function showCard(e) {
+  e.preventDefault();
+  let selectedRating = form.radio.value;
   if (!selectedRating) {
     errorMessage.style.display = "block";
     return;
   }
-  rate.innerHTML = selectedRating.value;
-  // displays thank you card
+  rate.textContent = selectedRating;
+  ratingCard.style.display = "none";
   thanksCard.classList.remove("hidden");
-  mainCard.style.visibility = "hidden";
-};
+}
 
-showCardButton.addEventListener("click", showCard);
-
-// ratings selection and state
-ratings.forEach(function (rates) {
-  rates.addEventListener("click", function () {
-    ratings.forEach(function (btn) {
-      btn.classList.remove("active");
-    });
-    rates.classList.add("active");
-    errorMessage.style.display = "none";
-  });
-});
+form.addEventListener("submit", showCard);

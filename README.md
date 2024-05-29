@@ -1,7 +1,5 @@
 # Frontend Mentor - Interactive rating component solution
 
-This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
 ## Table of contents
 
 - [Overview](#overview)
@@ -9,7 +7,6 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [Author](#author)
-
 
 ## Overview
 
@@ -24,7 +21,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](/design/screenshot.jpg)
+![](/design/desktop-preview.jpg)
 
 ### Links
 
@@ -40,4 +37,3 @@ Users should be able to:
 ## Author
 
 - Frontend Mentor - [@mkboris](https://www.frontendmentor.io/profile/mkboris)
-

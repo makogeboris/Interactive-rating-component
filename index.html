@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+    <meta
+      name="description"
+      content="Interactive rating component for feedback on support requests. Choose a rating and receive a thank you message. All feedback helps us improve our services."
+    />
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="icon"
@@ -23,55 +26,68 @@
   </head>
   <body>
     <!-- Rating state start -->
-    <main class="card-container">
-      <div class="card">
+    <main>
+      <section class="rating-card">
         <div class="icon-container">
           <img class="icon" src="images/icon-star.svg" alt="" />
         </div>
         <div class="text-area">
-          <h1 class="main-heading">How did we do?</h1>
-          <p class="main-paragraph">
+          <h1 class="heading">How did we do?</h1>
+          <p class="paragraph">
             Please let us know how we did with your support request. All
             feedback is appreciated to help us improve our offering!
           </p>
         </div>
-        <ul class="rating-container">
-          <li><button class="ratings" value="1">1</button></li>
-          <li><button class="ratings" value="2">2</button></li>
-          <li><button class="ratings" value="3">3</button></li>
-          <li><button class="ratings" value="4">4</button></li>
-          <li><button class="ratings" value="5">5</button></li>
-        </ul>
-        <div>
-          <p id="error-message">Please choose a rating before submitting.</p>
-        </div>
-        <button class="submit-btn show-card-btn">Submit</button>
-      </div>
-    </main>
-    <!-- Rating state end -->
 
-    <!-- Thank you state start -->
-    <section class="thanks-card hidden">
-      <div class="thanks-container">
-        <div class="illustration">
-          <img
-            class="illus-img"
-            src="images/illustration-thank-you.svg"
-            alt=""
-          />
-        </div>
-        <div class="rated">
+        <form novalidate id="form" action="">
+          <fieldset>
+            <legend class="sr-only">Choose a rating</legend>
+            <div class="radio-container">
+              <input type="radio" id="radio1" name="radio" value="1" />
+              <label class="form-control" for="radio1">1</label>
+            </div>
+            <div class="radio-container">
+              <input type="radio" id="radio2" name="radio" value="2" />
+              <label class="form-control" for="radio2">2</label>
+            </div>
+            <div class="radio-container">
+              <input type="radio" id="radio3" name="radio" value="3" />
+              <label class="form-control" for="radio3">3</label>
+            </div>
+            <div class="radio-container">
+              <input type="radio" id="radio4" name="radio" value="4" />
+              <label class="form-control" for="radio4">4</label>
+            </div>
+            <div class="radio-container">
+              <input type="radio" id="radio5" name="radio" value="5" />
+              <label class="form-control" for="radio5">5</label>
+            </div>
+          </fieldset>
+          <div class="btn-error">
+            <p class="error-message" role="alert" id="error-message">
+              Please choose a rating before submitting.
+            </p>
+            <button type="submit" class="btn" aria-describedby="error-message">
+              Submit
+            </button>
+          </div>
+        </form>
+      </section>
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+      <section class="thanks-card hidden">
+        <img class="illus-img" src="images/illustration-thank-you.svg" alt="" />
+        <div class="rate-container">
           <p class="rated-p">You selected <span id="rate"></span> out of 5</p>
         </div>
-        <div class="sub-area">
-          <h2 class="sub-heading">Thank you!</h2>
-          <p class="sub-paragraph">
-            We appreciate you taking the time to give a rating. If you ever need
-            more support, don’t hesitate to get in touch!
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- Thank you state end -->
+        <h2 class="heading">Thank you!</h2>
+        <p class="paragraph">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </section>
+      <!-- Thank you state end -->
+    </main>
   </body>
 </html>

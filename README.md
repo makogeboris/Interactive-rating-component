@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - [Solution](https://github.com/mkboris/Interactive-rating-component)
-- [Live Site](https://mkboris.github.io/Interactive-rating-component/)
+- [Live Site](https://makogeboris.github.io/Interactive-rating-component/)
 
 ### Built with
 
